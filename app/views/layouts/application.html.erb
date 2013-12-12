@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FreshCoastSoccer</title>
+  <script language="javascript" type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.10.0/jquery.validate.min.js"></script>
+  <link rel="icon" type="image/png" href="/assets/Soccer-Ball-icon.png">
+  
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+  
+  <meta name="viewport" content="with=device-width,initial-scale=1.0" />
+</head>
+
+<body>
+	<script>
+var options={ "publisher": "eae8478f-19e5-4ace-a727-37e3a0b4948c", "position": "right", "ad": { "visible": false, "openDelay": 5, "closeDelay": 0}, "chicklets": { "items": ["facebook", "twitter", "googleplus", "tumblr", "email"]}};
+var st_hover_widget = new sharethis.widgets.hoverbuttons(options);
+
+ 
+(function (d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=443216965790088";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+!function(d,s,id){
+                        var js,fjs=d.getElementsByTagName(s)[0],
+                        p=/^http:/.test(d.location)?'http':'https';
+                        if(!d.getElementById(id)){
+                                js=d.createElement(s);
+                                js.id=id;js.src=p+'://platform.twitter.com/widgets.js';
+                                fjs.parentNode.insertBefore(js,fjs);
+                                }
+                        }(document, 'script', 'twitter-wjs');
+               
+</script>
+	<nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+     <div class="container">
+  	<!-- Brand and toggle get grouped for better mobile display -->
+  		<div class="navbar-header">
+    		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+      			<span class="sr-only">Toggle navigation</span>
+      			<span class="icon-bar"></span>
+      			<span class="icon-bar"></span>
+      			<span class="icon-bar"></span>
+    		</button>
+    		<a class="navbar-brand" href="/">Fresh Coast </a>
+  		</div>
+
+	<!-- Collect the nav links, forms, and other content for toggling -->
+  		<nav class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    		<ul class="nav navbar-nav">
+			   <li><a href="registration">Registration</a></li>
+               <li><a href="pro_store">Promotions & Soccer Store</a></li> 
+      		   <li><a href="sponsors">Sponsors</a></li>
+      		   <li class="dropdown">
+               		<a href="#" class="dropdown-toggle" data-toggle="dropdown">Reach Us <b class="caret"></b></a>
+                    		<ul class="dropdown-menu">
+                            		<li><a href="contact">Contact Info</a></li>
+                                    <li><a href="location">Location/Maps</a></li>
+                            </ul>
+               </li>
+               
+			</ul>
+			
+			<ul class="nav navbar-nav navbar-right">
+				<!--li class="btn btn-default navbar-btn">Register Now!</li-->
+                  <%= link_to 'Register Now', new_user_registration_path, :class=>"btn btn-info navbar-btn" %>,
+              </ul>
+   		</nav><!-- /.navbar-collapse -->
+   	 </div>
+	</nav>
+	
+	
+	<div class="full-width-image-1">
+		<div class="logo-wrapper">
+        	<a href='/'><img class="img-responsive" src="/assets/freshcoast_logo_mgdraft_updated.jpg" width="209px;" /></a>
+      	</div>
+    </div><!-- /full-width-image-1 -->
+    
+    
+    
+	
+       
+   
+   
+   <div id="main">
+        <div id="column_left">
+        	<%=yield%>
+        </div>
+        
+        <div id="column_right">
+        	
+        	
+        	
+        <ul class="sidebar-nav">
+         	<li><a href="announce">Announcements</a></li>
+           	<li><a href="checkin">Check-In</a></li>   
+          	<li><a href="detail">Tournament Details</a></li>   
+          	<li><a href="referee">Referees & Volunteers</a></li>   
+          	<li><a href="photos">Photo & Videos</a></li> 
+         	<li><a href="past_champ">Past Champions</a></li> 
+         	<li><a href="accomd">Accommadations</a></li>
+         	<li><a href="registration_forms">Registration Forms</a></li>
+        </ul>
+        
+        
+        <div id="share">
+        <a class="facebook" target="_blank" onclick="return !window.open(this.href, 'Facebook', 'width=640,height=300')" 
+                                                href="https://www.facebook.com/sharer/sharer.php?app_id=443216965790088&sdk=joey&u=http%3A%2F%2Ffreshcoastbeachsoccer.com/%2F&display=popup">
+                                                <img class="share" src="/assets/facebook.png"/>        
+                                        </a>
+                                
+                                        <a href="https://twitter.com/share" class="twitter" target="_blank"
+                                                                                                                onclick="return !window.open(this.href, 'Twitter', 'width=640,height=300')" 
+                                                                                                                data-url="http://www.freshcoastbeachsoccer.com/" 
+                                                                                                                data-hashtags="BeachSoccer">
+                                        <img class="share" src="/assets/twitter.png"/>        
+                                        </a>
+                               
+                               <div id="spacer"></div>
+                                        <!-- Place this tag where you want the share button to render. -->
+                                        <a href="https://plus.google.com/share?url=http://www.freshcoastbeachsoccer.com/" 
+                                                   onclick="return !window.open(this.href, 'Google', 'width=640,height=300')">
+                                            <img class="share" src="/assets/google.png" alt="Google+" title="Google+"/>
+                                        </a>
+              
+                                        <a href="mailto:?subject=Interested in Beach Soccer?&amp;body=Check out this site http://www.freshcoastbeachsoccer.com." title="Share by Email">
+                                                <img class="share" src="/assets/email.png"/>
+                                        </a>
+                                 </div>
+                                 
+                                 
+                                 
+<div id="test-popup" class="white-popup mfp-hide">
+	<div id="row" class="row">
+		<div style="float:left;padding-left:15px;padding-right:5px;padding-top: 15px;" >
+		 	  <%= form_for Invitation.new ,:remote=>true   do |f| %>
+			  <fieldset>
+			  <legend>All fields are required</legend>
+			    <label >Your Name</label></br>
+			    
+      			<%= f.text_field :sender  %></br>
+      			 <label>Your Email</label></br>
+      			<%= f.text_field :sender_email%><br/>
+      			<label>Your Friend's Name</label></br>
+      			<%= f.text_field :receiver %><br/>
+      		    <label>Your Friend's Email</label></br>
+      			<%= f.text_field :receiver_email%>
+      			</br></br>
+      			<%= f.submit 'Send Invitation!' ,:class=>"btn btn-info btn-large" ,:id=>"invite-btn"%>
+			</fieldset>	
+			<% end %>
+ 		</div>
+  		<div style="margin-left:10px;float:left;text-align: center;">
+  			<h4>Send this flyer to your friend </h4>
+  	 		<h4>and spread the fun!</h4>
+  			<img src="/assets/flyer_email(new).jpg" width="250px"></img>		
+  		</div>
+  </div>
+  
+  <div id="thank-you"   style="display: none">
+		 <p>Your Invitation Has Been Successfully Sent!</p>
+		 <p>We Appreciate it!</p>
+		 <button class="btn btn-info" id="another-invite">Click to send another one</button>
+  </div>
+</div>
+ 
+<script>
+
+ // $( "#invite-btn" ).click(function() {
+ // 	$( "#thank-you" ).show( "slow" );
+  //		$( "#row" ).hide( "slow" ); 
+	//});
+
+	$( "#another-invite" ).click(function() {
+  		$( "#thank-you" ).hide( "slow" );
+  		$( "#row" ).show( "slow" ); 
+	});
+</script>
+
+<script>
+$(document).ready(function(){
+	
+
+$("#new_invitation").validate({
+
+ rules: {
+    "invitation[sender]":{ 
+    	  required:true,
+    	  minlength:2,
+   },
+   "invitation[sender_email]":{ 
+    	  required:true,
+    	 
+    	  email:true,
+   },
+   "invitation[receiver]":{ 
+    	  required:true,
+    	  minlength:2,
+   },
+   "invitation[receiver_email]":{ 
+    	  required:true,
+    	  email:true,
+   },
+    
+    
+},
+ errorElement: "div",
+errorPlacement: function(error, element) {
+        error.insertAfter(element);
+   },
+	submitHandler: function(form) {
+    form.submit();
+  	$( "#thank-you" ).show( "slow" );
+  	$( "#row" ).hide( "slow" ); 
+	
+  }
+
+});
+});
+
+
+</script>
+
+
+<style>
+  .white-popup {
+  position: relative;
+  background: #FFF;
+  padding: 20px;
+  width: auto;
+  max-width: 600px;
+  margin: 20px auto;
+}
+</style>
+<a href="#test-popup" class="open-popup-link btn btn-info " style="margin-left: 18px;margin-bottom:10px;">Invide Your Friends!</a>
+<script>
+$('.open-popup-link').magnificPopup({
+  type:'inline',
+  midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
+});
+</script>
+ 
+
+                                 
+                                 
+                                 
+                                 
+                                 
+        					</div>
+ 						</div>
+  
+						<div class="spacer"></div>
+                        <hr/>
+                        
+                        
+                       <div id="down"> 
+                        <div id="bottom">
+                         
+                                <h6><small> some of our sponsors</small></h6>
+                                <a href="http://www.beachboardwalk.com/" target="_blank"><img src="http://www.beachsoccerchampionships.com/images/logo_boardwalk(new).jpg" width="120" height="105" border="0" /></a>&nbsp;
+                                <a href="http://www.brinksawards.com/" target="_blank"><img src="http://www.beachsoccerchampionships.com/images/logo_brinks_sm.gif" width="100" height="94" border="0" /></a>&nbsp;
+                                <a href="http://www.hawaiiantropic.com/" target="_blank"><img src="http://www.beachsoccerchampionships.com/images/logo_ht_sm.jpg" width="120" height="69" border="0" /></a>&nbsp;
+                                <img src="http://www.beachsoccerchampionships.com/images/logo_espnd_sm.jpg" width="120" height="119" border="0" />
+                        </div>        
+                       	<div class="spacer"></div>
+                		<div id="footer">© 2013 U.S. Soccer International
+                        </div>
+                        </div>
+      
+      
+</body>
