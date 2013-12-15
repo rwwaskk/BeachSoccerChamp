@@ -15,10 +15,25 @@ h2{
   font-weight:900;
   font-size:xx-large;
 }
+h2.green{
+  font-family: 'Exo 2', sans-serif;
+  font-weight:900;
+  font-size:xx-large;
+  color:#32CD32;
+}
 p.welcome-text{
   font-family: 'Exo 2', sans-serif;
   font-weight:bold;
   font-size:large;
+}
+p.underline{
+ text-decoration:underline;
+}
+p.coming-soon{
+  color:#32CD32;
+}
+p.ita{
+  font-style:italic;
 }
 p.sub-text{
   font-family: 'Exo 2', sans-serif;
@@ -47,12 +62,30 @@ li.sub-text{
   font-size:medium;
   color:#32CD32;
 }
+li.sub-text-1{
+  font-family: 'Exo 2', sans-serif;
+  font-weight:300;
+  font-size:medium;
+  
+}
+
+li.detail{
+  font-family: 'Exo 2', sans-serif;
+  font-weight:300;
+}
 span.tour-date{
   color:#DC143C;
 }
-strong{
+strong.fun{
   color:#DC143C;
+  
 }
+p.step{
+  font-family: 'Exo 2', sans-serif;
+  font-weight:600;
+  font-size:medium; 
+}
+
 
 div.error{
 color: #f33;
