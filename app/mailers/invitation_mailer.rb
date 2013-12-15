@@ -1,5 +1,5 @@
 class InvitationMailer < ActionMailer::Base
-  default from: "info@freshcoastbeachsoccer.com"
+  default from: "info@beachsoccerchampionships.com"
   def invite(invitation)
     @invitation=invitation
     attachments.inline['flyer_email(new).jpg'] = File.read("#{Rails.root}/public/flyer_email(new).jpg")
